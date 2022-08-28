@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3b69a790d03cb5bf5f7cc2c87f7d5dd1a0e20aa1ec26091402bb476dd9380994"
+            "sha256": "ed6201c67897fe5dfaae3823959d158f1c15147ee9ae716859bdb097453f2a0f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -39,6 +39,14 @@
             ],
             "index": "pypi",
             "version": "==0.12.2"
+        },
+        "cdktf-cdktf-provider-docker": {
+            "hashes": [
+                "sha256:96dc7e19de0be4130c56e64948fca84f689e865360d90d81aed2d33edca04932",
+                "sha256:e0be758a31871c18a8d75021de0a2c6009d8c0a59f36fcdaf8d204fd262f4ecd"
+            ],
+            "index": "pypi",
+            "version": "==2.0.38"
         },
         "constructs": {
             "hashes": [

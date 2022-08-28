@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from constructs import Construct
 from cdktf import App, TerraformStack
+from cdktf_cdktf_provider_docker import Image, Container, DockerProvider
 
 
 class MyStack(TerraformStack):
@@ -8,6 +9,19 @@ class MyStack(TerraformStack):
         super().__init__(scope, ns)
 
         # define resources here
+        DockerProvider(self, 'docker')
+
+        docker_image = Image(self, 'nginxImage',
+            name='nginx:latest',
+            keep_locally=False)
+
+        Container(self, 'nginxContainer',
+            name='tutorial',
+            image=docker_image.name,
+            ports=[{
+                'internal': 80,
+                'external': 8000
+            }])
 
 
 app = App()
